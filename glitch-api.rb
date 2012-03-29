@@ -5,13 +5,6 @@ module GlitchAPI
   class Error < ::Exception; end
   class Basic
     def initialize(character_name)
-#      api_id= "39-12bace9e977cbead1d84833a3fa35c3c2bf3300a"
-#      api_secret="1411b94bd7345c094c1287a20a9f46d71a7efc8d"
-#      client = OAuth2::Client.new(api_id, api_secret, {
-#        :site => "http://api.glitch.com",
-#        :authorize_path => "oauth2/authorize",
-#        :access_token_path => "oauth2/token",
-#      })
       @token_string = File::read(character_name + ".oauth2")
       @character = character_name
       #@token = OAuth2::AccessToken.new(client, token_string)
